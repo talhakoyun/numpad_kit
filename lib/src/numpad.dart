@@ -228,87 +228,87 @@ class _NumpadState extends State<Numpad> {
           padding: padding,
           color: theme.backgroundColor,
           child: LayoutBuilder(
-          builder: (context, constraints) {
-            return Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // Row 1: 1, 2, 3
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _buildButton(context, '1', theme),
-                    SizedBox(width: spacing),
-                    _buildButton(context, '2', theme),
-                    SizedBox(width: spacing),
-                    _buildButton(context, '3', theme),
-                  ],
-                ),
-                SizedBox(height: spacing),
+            builder: (context, constraints) {
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Row 1: 1, 2, 3
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildButton(context, '1', theme),
+                      SizedBox(width: spacing),
+                      _buildButton(context, '2', theme),
+                      SizedBox(width: spacing),
+                      _buildButton(context, '3', theme),
+                    ],
+                  ),
+                  SizedBox(height: spacing),
 
-                // Row 2: 4, 5, 6
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _buildButton(context, '4', theme),
-                    SizedBox(width: spacing),
-                    _buildButton(context, '5', theme),
-                    SizedBox(width: spacing),
-                    _buildButton(context, '6', theme),
-                  ],
-                ),
-                SizedBox(height: spacing),
+                  // Row 2: 4, 5, 6
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildButton(context, '4', theme),
+                      SizedBox(width: spacing),
+                      _buildButton(context, '5', theme),
+                      SizedBox(width: spacing),
+                      _buildButton(context, '6', theme),
+                    ],
+                  ),
+                  SizedBox(height: spacing),
 
-                // Row 3: 7, 8, 9
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _buildButton(context, '7', theme),
-                    SizedBox(width: spacing),
-                    _buildButton(context, '8', theme),
-                    SizedBox(width: spacing),
-                    _buildButton(context, '9', theme),
-                  ],
-                ),
-                SizedBox(height: spacing),
+                  // Row 3: 7, 8, 9
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _buildButton(context, '7', theme),
+                      SizedBox(width: spacing),
+                      _buildButton(context, '8', theme),
+                      SizedBox(width: spacing),
+                      _buildButton(context, '9', theme),
+                    ],
+                  ),
+                  SizedBox(height: spacing),
 
-                // Row 4: Extra buttons and 0
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Left extra button or spacer
-                    if (widget.showLeftExtraButton)
-                      _buildButton(
-                        context,
-                        '',
-                        theme,
-                        customChild: widget.leftExtraButton,
-                        customCallback: widget.onLeftExtraButton,
-                      )
-                    else
-                      SizedBox(width: theme.buttonSize),
-                    SizedBox(width: spacing),
+                  // Row 4: Extra buttons and 0
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // Left extra button or spacer
+                      if (widget.showLeftExtraButton)
+                        _buildButton(
+                          context,
+                          '',
+                          theme,
+                          customChild: widget.leftExtraButton,
+                          customCallback: widget.onLeftExtraButton,
+                        )
+                      else
+                        SizedBox(width: theme.buttonSize),
+                      SizedBox(width: spacing),
 
-                    // 0 button
-                    _buildButton(context, '0', theme),
-                    SizedBox(width: spacing),
+                      // 0 button
+                      _buildButton(context, '0', theme),
+                      SizedBox(width: spacing),
 
-                    // Right extra button or spacer
-                    if (widget.showRightExtraButton)
-                      _buildButton(
-                        context,
-                        '',
-                        theme,
-                        customChild: widget.rightExtraButton,
-                        customCallback: widget.onRightExtraButton,
-                      )
-                    else
-                      SizedBox(width: theme.buttonSize),
-                  ],
-                ),
-              ],
-            );
-          },
-        ),
+                      // Right extra button or spacer
+                      if (widget.showRightExtraButton)
+                        _buildButton(
+                          context,
+                          '',
+                          theme,
+                          customChild: widget.rightExtraButton,
+                          customCallback: widget.onRightExtraButton,
+                        )
+                      else
+                        SizedBox(width: theme.buttonSize),
+                    ],
+                  ),
+                ],
+              );
+            },
+          ),
         ),
       ),
     );

@@ -1,0 +1,44 @@
+name: numpad_kit
+description: >
+  A fully customizable, cross-platform numeric keypad widget for Flutter.
+  Supports custom themes, builders, keyboard input, and optional extra buttons.
+version: 0.0.1
+homepage: https://github.com/talhakoyun/numpad_kit
+repository: https://github.com/talhakoyun/numpad_kit
+issue_tracker: https://github.com/talhakoyun/numpad_kit/issues
+license: MIT
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+# Include example app for pub.dev display
+flutter_examples:
+  - example/
+
+# Optional metadata
+topics:
+  - numpad
+  - keypad
+  - input
+  - flutter
